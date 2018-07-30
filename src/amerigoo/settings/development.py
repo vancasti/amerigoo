@@ -94,3 +94,15 @@ LOGGING = {
 }
 
 logging.config.dictConfig(LOGGING)
+
+# Config app databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'amerigoo_db',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+}
