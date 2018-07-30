@@ -3,7 +3,18 @@ from django.utils.encoding import python_2_unicode_compatible
 import uuid
 from django.db import models
 from django.conf import settings
+from accounts.models import TimeStampedModel
 
+class Address(TimeStampedModel):
+    user = models.ForeignKey('authtools.user', models.DO_NOTHING, blank=True, null=True)
+    street = models.CharField(max_length=255, blank=True, null=True)
+    city = models.CharField(max_length=64, blank=True, null=True)
+    postal_code = models.CharField(max_length=32, blank=True, null=True)
+    province = models.ForeignKey('Province', models.DO_NOTHING, blank=True, null=True)
+    region = models.ForeignKey('Region', models.DO_NOTHING, blank=True, null=True)
+    country = models.ForeignKey('Country', models.DO_NOTHING, blank=True, null=True)
+    mobile = models.CharField(max_length=32, blank=True, null=True)
+    phone = models.CharField(max_length=32, blank=True, null=True)
 
 class BaseProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
@@ -22,8 +33,21 @@ class BaseProfile(models.Model):
     class Meta:
         abstract = True
 
+class Country(models.Model):
+    name = models.CharField(max_length=64)
+    key = models.CharField(max_length=8)
 
 @python_2_unicode_compatible
 class Profile(BaseProfile):
     def __str__(self):
         return "{}'s profile". format(self.user)
+
+class Province(models.Model):
+    region = models.ForeignKey('Region', models.DO_NOTHING)
+    name = models.CharField(max_length=64)
+    key = models.CharField(max_length=8)
+
+class Region(models.Model):
+    country = models.ForeignKey(Country, models.DO_NOTHING)
+    name = models.CharField(max_length=64)
+    key = models.CharField(unique=True, max_length=8)
