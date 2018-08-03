@@ -16,6 +16,12 @@ class Address(TimeStampedModel):
     mobile = models.CharField(max_length=32, blank=True, null=True)
     phone = models.CharField(max_length=32, blank=True, null=True)
 
+    def __str__(self):
+        return self.street[:50] + ' ' + self.postal_code + ' ' + self.city[:24] + '(' + self.province.name + ')'
+
+    class Meta:
+        verbose_name_plural = "Addresses"
+
 class BaseProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
                                 on_delete=models.CASCADE,
@@ -37,6 +43,13 @@ class Country(models.Model):
     name = models.CharField(max_length=64)
     key = models.CharField(max_length=8)
 
+    def __str__(self):
+        return self.key + ' - ' + self.name[:50]
+
+    class Meta:
+        verbose_name_plural = "Countries"
+
+
 @python_2_unicode_compatible
 class Profile(BaseProfile):
     def __str__(self):
@@ -47,7 +60,13 @@ class Province(models.Model):
     name = models.CharField(max_length=64)
     key = models.CharField(max_length=8)
 
+    def __str__(self):
+        return self.key + ' - ' + self.name[:50]
+
 class Region(models.Model):
     country = models.ForeignKey(Country, models.DO_NOTHING)
     name = models.CharField(max_length=64)
     key = models.CharField(unique=True, max_length=8)
+
+    def __str__(self):
+        return self.key + ' - ' + self.name[:50]
