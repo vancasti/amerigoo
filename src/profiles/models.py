@@ -17,7 +17,7 @@ class Address(TimeStampedModel):
     phone = models.CharField(max_length=32, blank=True, null=True)
 
     def __str__(self):
-        return self.street[:50] + ' ' + self.postal_code + ' ' + self.city[:24] + '(' + self.province.name + ')'
+        return self.street[:50] + ' ' + self.postal_code + ' ' + self.city[:24]
 
     class Meta:
         verbose_name_plural = "Addresses"
