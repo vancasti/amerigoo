@@ -16,6 +16,7 @@ urlpatterns = [
     path('users/', include(profiles.urls)),
     path('admin/', admin.site.urls),
     path('', include(accounts.urls)),
+    path('api/', include('ecommerce.urls')),
 ]
 
 # User-uploaded files like profile pics need to be served in development

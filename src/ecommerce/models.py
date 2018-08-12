@@ -37,9 +37,17 @@ class Product(TimeStampedModel):
 class ProductCategory(models.Model):
     name = models.CharField(max_length=60)
 
+    class Meta:
+        verbose_name_plural = "Product Categories"
+
+
 class ProductTag(models.Model):
     product = models.ForeignKey(Product, models.DO_NOTHING)
     tag = models.ForeignKey('Tag', models.DO_NOTHING)
+
+    class Meta:
+        verbose_name_plural = "Product Tags"
+
 
 class Provider(TimeStampedModel):
     profile = models.OneToOneField('profiles.profile', models.DO_NOTHING, blank=False)
