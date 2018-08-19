@@ -12,11 +12,12 @@ admin.site.site_header = 'Amerigoo Administration'
 
 urlpatterns = [
     path('', views.HomePage.as_view(), name='home'),
+    path('shop/', views.ShopPage.as_view(), name='shop'),
     path('about/', views.AboutPage.as_view(), name='about'),
     path('users/', include(profiles.urls)),
     path('admin/', admin.site.urls),
     path('', include(accounts.urls)),
-    path('api/', include('ecommerce.urls')),
+    #path('api/', include('ecommerce.urls')),
 ]
 
 # User-uploaded files like profile pics need to be served in development

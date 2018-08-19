@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from django.utils.encoding import python_2_unicode_compatible
 import uuid
+import datetime
 from django.db import models
 from django.conf import settings
 from accounts.models import TimeStampedModel
@@ -35,6 +36,14 @@ class BaseProfile(models.Model):
                                 blank=True)
     bio = models.CharField("Short Bio", max_length=200, blank=True, null=True)
     email_verified = models.BooleanField("Email verified", default=False)
+    birthdate = models.DateField(("Birthday"), default=datetime.date.today)
+
+    @property
+    def age(self):
+        today = datetime.date.today()
+        return (today.year - self.birthdate.year) - int(
+            (today.month, today.day) <
+            (self.birthdate.month, self.birthdate.day))
 
     class Meta:
         abstract = True
