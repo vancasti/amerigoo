@@ -32,6 +32,9 @@ local.env
 .pydevproject
 .settings
 
+# Virtual Studio
+.vscode
+
 # Linux Editors
 *~
 \#*\#
