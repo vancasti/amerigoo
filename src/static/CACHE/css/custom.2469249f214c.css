@@ -1,0 +1,167 @@
+.btn {
+  padding: 1.05em 1.2em;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.breadcrumb {
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb li {
+  font-size: 1.2em;
+}
+.breadcrumb li:first-child > a {
+  font-weight: bold;
+}
+.btn-sm {
+  padding: 5px 10px;
+}
+.btn-success {
+  background-color: #60463B;
+  border-color: #60463B;
+}
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #3F2803;
+  border-color: #3F2803;
+}
+.content_padder {
+  padding: 2em 0;
+}
+.copyright_wrap {
+  background: #0c0c0c;
+}
+.copyright_text {
+  color: #bfbfbf;
+  font-size: 0.714em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.count.badge {
+  background-color: #d0d0d0;
+}
+div.ppt {
+  display: none !important;
+}
+.field-profile-image {
+  margin-bottom: -15px;
+}
+.field-paymentform-card_expired_month {
+  margin-bottom: -15px;
+}
+.kv-editable-form-inline .btn-sm {
+  margin: 0 4px 0 0;
+}
+.input-group.bootstrap-touchspin {
+  width: 100px;
+}
+.input-group-btn {
+  font-size: 9.3px;
+}
+#paymentform-card_expired_month {
+  margin-right: 5px;
+}
+#paymentform-card_expired_month,
+#paymentform-card_expired_year {
+  position: relative;
+  top: -10px;
+  float: left;
+  width: 49%;
+}
+.fa-large {
+  font-size: 1.5em !important;
+}
+.full-width {
+  width: 100%;
+}
+.has-error .help-block {
+  font-weight: bold;
+}
+.logo_descr {
+  color: #bfbfbf;
+}
+.main_page .menu_main_nav > li {
+  margin-left: 1em;
+}
+.main_page .menu_main_nav > li > a {
+  padding: 0.5em 1.6em 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+}
+.main_page .menu_main_nav > li:last-child > a {
+  background-color: rgba(34, 12, 16, 0.5);
+  color: white;
+}
+.main_page .menu_main_nav > li:last-child > a:hover {
+  background-color: rgba(34, 12, 16, 0.8);
+  color: white;
+}
+.main_page .menu_main_nav > li > a:hover {
+  color: #60463B;
+}
+.main_page [class^="icon-"]:before,
+.main_page [class*=" icon-"]:before {
+  color: white;
+}
+.main_page .nav > li > a:hover {
+  background-color: inherit;
+}
+.nav-stacked > li + li {
+  margin: 0;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: #f5f5f5;
+  color: #60463B;
+}
+.navbar {
+  border-width: 1px;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  background: rgba(0, 0, 0, 0.1);
+}
+.navbar-collapse {
+  padding: 0;
+}
+#select2-information-province-results > li:nth-child(1) > strong {
+  display: none;
+}
+.separator {
+  border-top: 3px solid #e2e6da;
+  margin: 3em 0;
+}
+.share_buttons {
+  width: 300px;
+  padding: 2em 0 2em 0;
+}
+.share_buttons .sc_socials_item {
+  float: left;
+  margin-right: 1em;
+}
+.product_meta {
+  clear: both;
+}
+.right {
+  float: right;
+}
+.table > thead > tr > th {
+  border-bottom: none;
+}
+textarea.form-control {
+  color: #8a8a8a;
+}
+.top_panel_top {
+  color: #bfbfbf;
+  font-weight: 700;
+  background: #0c0c0c;
+}

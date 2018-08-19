@@ -1,0 +1,1309 @@
+{% extends "base.html" %} 
+
+{% load staticfiles %} 
+{% load crispy_forms_tags %} 
+
+{% block title %}
+{{ block.super }} Home {%endblock%} 
+
+{% block navbar-left %} {% include "_navbar.html" with active_link="home" %} {% endblock %} 
+
+{% block navbar-right%} 
+{% if not user.is_authenticated %}
+<a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
+<a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
+{% else %} 
+{{ block.super }} 
+{% endif %} 
+{% endblock %} 
+{% block splash %}
+
+<body class="page body_filled article_style_stretch top_panel_above sidebar_hide">
+
+    <div class="body_wrap">
+        <div class="page_wrap">
+            <div class="top_panel_fixed_wrap"></div>
+
+            <header class="top_panel_wrap top_panel_style_4 scheme_original">
+                <div class="top_panel_wrap_inner top_panel_inner_style_4 top_panel_position_above">
+                   <!-- <?= $this->render('@partials/topbar.php') ?>
+                    <?= $this->render('@partials/menu_shop.php') ?>
+                    <?= $this->render('@partials/menu_mobile.php') ?> -->
+                </div>
+            </header>
+
+            <div class="page_content_wrap page_paddings_no">
+                <div class="content_wrap">
+                    <div class="content">
+                        <article class="post_item post_item_single page">
+                            <div class="post_content">
+
+                                <section>
+                                    <div id="mainslider_1" class="rev_slider_wrapper fullwidthbanner-container mainslider_1" style="">
+                                        <!-- START REVOLUTION SLIDER 5.2.5 fullwidth mode -->
+                                        <div id="rev_slider_12_1" class="rev_slider fullwidthabanner" data-version="5.2.5">
+                                            <ul>
+                                                <!-- SLIDE  -->
+                                                <li data-index="rs-34" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"
+                                                    data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{% static 'site/img/slider1_home1-100x50.jpg' %}"
+                                                    data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1=""
+                                                    data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+                                                    data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                                    <!-- MAIN IMAGE -->
+                                                    <img src="{% static 'site/img/slider1_home1.jpg' %}" alt="" title="slider1_home1" width="1920" height="612" data-bgposition="center center"
+                                                        data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg"
+                                                        data-no-retina>
+                                                    <!-- LAYERS -->
+                                                    <!-- LAYER NR. 1 -->
+                                                    <div class="tp-caption ms1_s1_logo tp-resizeme" id="slide-34-layer-1" data-x="['left','left','left','left']" data-hoffset="['25','25','25','25']"
+                                                        data-y="['top','top','top','top']" data-voffset="['135','135','135','135']"
+                                                        data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
+                                                        data-transform_in="opacity:0;s:1300;e:Power2.easeInOut;" data-transform_out="opacity:0;s:600;"
+                                                        data-start="900" data-responsive_offset="on" data-end="59250">
+                                                        <img src="{% static 'site/img/slider11_logo.png' %}" alt="" width="96" height="107" data-ww="['96px','96px','96px','96px']" data-hh="['107px','107px','107px','107px']"
+                                                            data-no-retina>
+                                                    </div>
+                                                    <!-- LAYER NR. 2 -->
+                                                    <div class="tp-caption white_text_30px ms1_s1_text tp-resizeme" id="slide-34-layer-2" data-x="['left','left','left','left']"
+                                                        data-hoffset="['25','25','25','25']" data-y="['top','top','top','top']"
+                                                        data-voffset="['275','275','275','275']" data-width="none" data-height="none"
+                                                        data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
+                                                        data-transform_out="opacity:0;s:600;" data-mask_in="x:[-100%];y:0;" data-start="1300"
+                                                        data-splitin="none" data-splitout="none" data-responsive_offset="on"
+                                                        data-end="899700">
+                                                        A huge variety<br/> of the freshest fruits & vegetables.
+                                                    </div>
+                                                    <!-- LAYER NR. 3 -->
+                                                    <div class="tp-caption button_medium_filled ms1_s1_button tp-resizeme" id="slide-34-layer-3" data-x="['left','left','left','left']"
+                                                        data-hoffset="['25','25','25','25']" data-y="['top','top','top','top']"
+                                                        data-voffset="['389','389','389','389']" data-width="none" data-height="none"
+                                                        data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:900;e:Power2.easeInOut;"
+                                                        data-transform_out="opacity:0;s:600;" data-start="1800" data-splitin="none"
+                                                        data-splitout="none" data-responsive_offset="on" data-end="899700" style="">
+                                                        <a href="#" class="sc_button sc_button_round sc_button_style_filled sc_button_scheme_original sc_button_size_medium">sweet
+                                                            potato gnocchi</a>
+                                                    </div>
+                                                </li>
+                                                <!-- SLIDE  -->
+                                                <li data-index="rs-35" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"
+                                                    data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{% static 'site/img/slider11-100x50.jpg' %}"
+                                                    data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1=""
+                                                    data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+                                                    data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                                    <!-- MAIN IMAGE -->
+                                                    <img src="{% static 'site/img/slider11.jpg' %}" alt="" title="slider11" width="1920" height="612" data-bgposition="center center" data-bgfit="cover"
+                                                        data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                                                    <!-- LAYERS -->
+                                                    <!-- LAYER NR. 1 -->
+                                                    <div class="tp-caption very_large_text ms1_s2_text  tp-resizeme" id="slide-35-layer-1" data-x="['right','right','right','right']"
+                                                        data-hoffset="['10','10','10','10']" data-y="['top','top','top','top']"
+                                                        data-voffset="['160','160','160','160']" data-width="none" data-height="none"
+                                                        data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:900;e:Power2.easeInOut;"
+                                                        data-transform_out="opacity:0;s:600;" data-start="1000" data-splitin="none"
+                                                        data-splitout="none" data-responsive_offset="on" data-end="899700">
+                                                        Organic products<br/> grown with love
+                                                    </div>
+                                                    <!-- LAYER NR. 2 -->
+                                                    <div class="tp-caption very_large_text ms1_s2_text_2 tp-resizeme" id="slide-35-layer-2" data-x="['right','right','right','right']"
+                                                        data-hoffset="['78','78','78','78']" data-y="['top','top','top','top']"
+                                                        data-voffset="['351','351','351','351']" data-width="none" data-height="none"
+                                                        data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:800;e:Power2.easeInOut;"
+                                                        data-transform_out="opacity:0;s:800;" data-start="1500" data-splitin="none"
+                                                        data-splitout="none" data-responsive_offset="on" data-end="899500">
+                                                        When quality matters to you<br/> and your customers
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="tp-bannertimer"></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="sp_20">
+                                    <div>
+                                        <h3 class="sc_title mt_35 mb_20" data-animation="animated fadeIn normal">Best Selling
+                                            Products</h3>
+                                        <article class="myportfolio-container shop-organics" id="esg-grid-19-1-wrap">
+                                            <div id="esg-grid-19-1" class="esg-grid">
+                                                <article class="esg-filters esg-singlefilters right">
+                                                    <div class="esg-navigationbutton esg-left  esg-fgc-19">
+                                                        <i class="eg-icon-left-open"></i>
+                                                    </div>
+                                                    <div class="esg-navigationbutton esg-right  esg-fgc-19">
+                                                        <i class="eg-icon-right-open"></i>
+                                                    </div>
+                                                </article>
+                                                <div class="esg-clear-no-height"></div>
+                                                <ul>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1441459331">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/26.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 esgbox" href="{% static 'site/img/26.jpg' %}" title="Fresh Meal Kit">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">Fresh
+                                                                        Meal Kit</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Fresh
+                                                                        Meal</a>,
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-25">
+                                                                    <del>
+                                                                        <span class="amount">&euro;9.99</span>
+                                                                    </del>
+                                                                    <ins>
+                                                                        <span class="amount">&euro;7.99</span>
+                                                                    </ins>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1441459572">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/7.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 esgbox" href="{% static 'site/img/7.jpg' %}" title="Organic Protein Powder">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">Organic
+                                                                        Protein Powder</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Cereals</a>,
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Fresh
+                                                                        Meal</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-30">
+                                                                    <div class="esg-starring">
+                                                                        <div class="star-rating" title="Rated 5 out of 5">
+                                                                            <span>
+                                                                                <strong class="rating">5</strong> out of
+                                                                                5
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;9.99</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1441460136">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/22.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 esgbox" href="{% static 'site/img/22.jpg' %}" title="Organic Veggie Mix">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">Organic
+                                                                        Veggie Mix</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Planting</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;7.99</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446824483">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/13.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 esgbox" href="{% static 'site/img/13.jpg' %}" title="Organic Milk">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">Organic
+                                                                        Milk</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Cereals</a>,
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-30">
+                                                                    <div class="esg-starring">
+                                                                        <div class="star-rating" title="Rated 3 out of 5">
+                                                                            <span>
+                                                                                <strong class="rating">3</strong> out of
+                                                                                5
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-25">
+                                                                    <del>
+                                                                        <span class="amount">&euro;16.78</span>
+                                                                    </del>
+                                                                    <ins>
+                                                                        <span class="amount">&euro;9.99</span>
+                                                                    </ins>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446824695">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/11.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 esgbox" href="{% static 'site/img/11.jpg' %}" title="Organic Bread">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">Organic
+                                                                        Bread</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Fresh
+                                                                        Meal</a>,
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;6.78</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446824879">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/31.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 esgbox" href="/images/31.jpg" title="Espresso Coffe Beans">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">Espresso
+                                                                        Coffe Beans</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Cereals</a>,
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Planting</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;22.45</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446825107">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/17.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 esgbox" href="{% static 'site/img/17.jpg' %}" title="Carrot Juice">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">Carrot
+                                                                        Juice</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Cereals</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;5.50</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446825291">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/36.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 esgbox" href="{% static 'site/img/36.jpg' %}" title="Body Beauty Organic">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">Body
+                                                                        Beauty Organic</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Fresh
+                                                                        Meal</a>,
+                                                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-30">
+                                                                    <div class="esg-starring">
+                                                                        <div class="star-rating" title="Rated 4 out of 5">
+                                                                            <span>
+                                                                                <strong class="rating">4</strong> out of
+                                                                                5
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="esg-content eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;5.45</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                        <div class="clear"></div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div>
+                                        <div class="columns_wrap columns_fluid">
+                                            <div class="col-md-6">
+                                                <div class="sc_section banner_big_bg_3 banner_big_block h252" data-animation="animated fadeIn normal">
+                                                    <div class="sc_section_inner">
+                                                        <div class="sc_section_overlay">
+                                                            <div class="sc_section_content">
+                                                                <div class="columns_wrap sc_columns columns_nofluid no_margins sc_columns_count_2">
+                                                                    <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
+                                                                    </div>
+                                                                    <div class="column-1_2 sc_column_item sc_column_item_2 right even">
+                                                                        <h3 class="sc_title">GIFT certificates</h3>
+                                                                        <p>Give the perfect gift every time &#8211; Organic
+                                                                            Store gift certificates!</p>
+                                                                        <a href="#" class="sc_button sc_button_round sc_button_style_filled sc_button_scheme_original sc_button_size_medium">CLICK
+                                                                            TO ORDER</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="sc_section banner_big_bg_4 banner_big_block h252" data-animation="animated fadeIn normal">
+                                                    <div class="sc_section_inner">
+                                                        <div class="sc_section_overlay">
+                                                            <div class="sc_section_content">
+                                                                <div class="columns_wrap sc_columns columns_nofluid no_margins sc_columns_count_2">
+                                                                    <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
+                                                                    </div>
+                                                                    <div class="column-1_2 sc_column_item sc_column_item_2 right even">
+                                                                        <h3 class="sc_title">GIFT certificates</h3>
+                                                                        <p>Give the perfect gift every time &#8211; Organic
+                                                                            Store gift certificates!</p>
+                                                                        <a href="#" class="sc_button sc_button_round sc_button_style_filled sc_button_scheme_original sc_button_size_medium">CLICK
+                                                                            TO ORDER</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                <section class="spb_25">
+                                    <div>
+                                        <h3 class="sc_title mt_50 mb_20" data-animation="animated fadeIn normal">Featured
+                                            Products</h3>
+                                        <article class="myportfolio-container shop-organics" id="esg-grid-18-1-wrap">
+                                            <div id="esg-grid-18-1" class="esg-grid">
+                                                <article class="esg-filters esg-singlefilters right">
+                                                    <div class="esg-navigationbutton esg-left esg-fgc-18">
+                                                        <i class="eg-icon-left-open"></i>
+                                                    </div>
+                                                    <div class="esg-navigationbutton esg-right  esg-fgc-18">
+                                                        <i class="eg-icon-right-open"></i>
+                                                    </div>
+                                                </article>
+                                                <div class="esg-clear-no-height"></div>
+                                                <ul>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1441459331">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/26.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-1346 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-1346 esgbox" href="{% static 'site/img/26.jpg' %}" title="Fresh Meal Kit">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-1346 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-1346 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-1346 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-1346" href="#" target="_self">Fresh
+                                                                        Meal Kit</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1346 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-1346" href="#">Fresh
+                                                                        Meal</a>,
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-1346" href="#">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1346 eg-arthur-organic-element-25">
+                                                                    <del>
+                                                                        <span class="amount">&euro;9.99</span>
+                                                                    </del>
+                                                                    <ins>
+                                                                        <span class="amount">&euro;7.99</span>
+                                                                    </ins>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1441459511">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/12.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-1354 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-1354 esgbox" href="{% static 'site/img/12.jpg' %}" title="Organic Dairy">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-1354 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-1354 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-1354 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-1354" href="#" target="_self">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1354 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-1354" href="#">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1354 eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;29.99</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1441459572">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/7.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-1355 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-1355 esgbox" href="{% static 'site/img/7.jpg' %}" title="Organic Protein Powder">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-1355 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-1355 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-1355 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-1355" href="#" target="_self">Organic
+                                                                        Protein Powder</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1355 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-1355" href="#">Cereals</a>,
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-1355" href="#">Fresh
+                                                                        Meal</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1355 eg-arthur-organic-element-30">
+                                                                    <div class="esg-starring">
+                                                                        <div class="star-rating" title="Rated 5 out of 5">
+                                                                            <span>
+                                                                                <strong class="rating">5</strong> out of
+                                                                                5
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1355 eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;9.99</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1441460136">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/22.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-1359 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-1359 esgbox" href="{% static 'site/img/22.jpg' %}" title="Organic Veggie Mix">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-1359 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-1359 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-1359 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-1359" href="#" target="_self">Organic
+                                                                        Veggie Mix</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1359 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-1359" href="#">Planting</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-1359 eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;7.99</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446824483">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/13.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2142 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-2142 esgbox" href="{% static 'site/img/13.jpg' %}" title="Organic Milk">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2142 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-2142 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-2142 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-2142" href="#" target="_self">Organic
+                                                                        Milk</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2142 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2142" href="#">Cereals</a>,
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2142" href="#">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2142 eg-arthur-organic-element-30">
+                                                                    <div class="esg-starring">
+                                                                        <div class="star-rating" title="Rated 3 out of 5">
+                                                                            <span>
+                                                                                <strong class="rating">3</strong> out of
+                                                                                5
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2142 eg-arthur-organic-element-25">
+                                                                    <del>
+                                                                        <span class="amount">&euro;16.78</span>
+                                                                    </del>
+                                                                    <ins>
+                                                                        <span class="amount">&euro;9.99</span>
+                                                                    </ins>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446824695">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/11.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2145 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-2145 esgbox" href="{% static 'site/img/11.jpg' %}" title="Organic Bread">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2145 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-2145 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-2145 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-2145" href="#" target="_self">Organic
+                                                                        Bread</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2145 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2145" href="#">Fresh
+                                                                        Meal</a>,
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2145" href="#">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2145 eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;6.78</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446824879">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/31.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2146 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-2146 esgbox" href="{% static 'site/img/31.jpg' %}" title="Espresso Coffe Beans">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2146 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-2146 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-2146 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-2146" href="#" target="_self">Espresso
+                                                                        Coffe Beans</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2146 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2146" href="#">Cereals</a>,
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2146" href="#">Planting</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2146 eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;22.45</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446825107">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/17.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2148 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-2148 esgbox" href="{% static 'site/img/17.jpg' %}" title="Carrot Juice">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2148 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-2148 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-2148 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-2148" href="#" target="_self">Carrot
+                                                                        Juice</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2148 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2148" href="#">Cereals</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2148 eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;5.50</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1446825291">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/36.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2151 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-2151 esgbox" href="{% static 'site/img/36.jpg' %}" title="Body Beauty Organic">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2151 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-2151 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-2151 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-2151" href="#" target="_self">Body
+                                                                        Beauty Organic</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2151 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2151" href="#">Fresh
+                                                                        Meal</a>,
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2151" href="#">Organic
+                                                                        Dairy</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2151 eg-arthur-organic-element-30">
+                                                                    <div class="esg-starring">
+                                                                        <div class="star-rating" title="Rated 4 out of 5">
+                                                                            <span>
+                                                                                <strong class="rating">4</strong> out of
+                                                                                5
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2151 eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;5.45</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="filterall eg-arthur-organic-wrapper" data-date="1450101144">
+                                                        <div class="esg-media-cover-wrapper">
+                                                            <div class="esg-entry-media">
+                                                                <img src="{% static 'site/img/9.jpg' %}" alt="">
+                                                            </div>
+                                                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2797 eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                                                    <a class="eg-arthur-organic-element-32 eg-post-2797 esgbox" href="{% static 'site/img/9.jpg' %}" title="Conconut Chips">Quick
+                                                                        View</a>
+                                                                </div>
+                                                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear">
+                                                                </div>
+                                                                <div class="esg-center eg-post-2797 eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                                                    <a href="#" class="eg-arthur-organic-element-28 eg-post-2797 button add_to_cart_button">Add
+                                                                        to cart</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="esg-entry-content eg-arthur-organic-content">
+                                                                <div class="esg-content eg-post-2797 eg-arthur-organic-element-36-a">
+                                                                    <a class="eg-arthur-organic-element-36 eg-post-2797" href="#" target="_self">Conconut
+                                                                        Chips</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2797 eg-arthur-organic-element-1-a">
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2797" href="#">Organic
+                                                                        Dairy</a>,
+                                                                    <a class="eg-arthur-organic-element-1 eg-post-2797" href="#">Planting</a>
+                                                                </div>
+                                                                <div class="esg-content eg-post-2797 eg-arthur-organic-element-25">
+                                                                    <span class="amount">&euro;6.70</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </article>
+                                        <div class="clear"></div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div>
+                                        <div class="sc_section imgc section_img_1">
+                                            <div class="sc_section_inner">
+                                                <div class="sc_section_overlay">
+                                                    <div class="sc_section_content">
+                                                        <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
+                                                            <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
+                                                            </div>
+                                                            <div class="column-1_2 sc_column_item sc_column_item_2 even">
+                                                                <h3 class="sc_title sc_title_style_2 sc_align_center">WHEN
+                                                                    QUALITY MATTERS TO YOU<br /> AND YOUR CUSTOMERS</h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="es_230"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="spt_40 spb_75 mt_30 mb_20">
+                                    <div>
+                                        <div class="columns_wrap">
+                                            <div class="col-md-3">
+                                                <div class="sc_title sc_title_style_3">NEW PRODUCT</div>
+                                                <aside class="widget widget_text">
+                                                    <div class="textwidget">
+                                                        <div class="woocommerce">
+                                                            <ul class="products">
+                                                                <li class="product has-post-thumbnail">
+                                                                    <div class="post_item_wrap">
+                                                                        <div class="post_featured">
+                                                                            <div class="post_thumb">
+                                                                                <img src="{% static 'site/img/9-570x703.jpg' %}" class="" alt="9" />
+                                                                                <div class="woo_thumb_buttons">
+                                                                                    <div class="quick_view_images">
+                                                                                        <a href="{% static 'site/img/9.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1" title="">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="post_content">
+                                                                            <h3>
+                                                                                <a href="#">Conconut Chips</a>
+                                                                            </h3>
+                                                                            <div class="product_cats">
+                                                                                <a href="#">Organic Dairy</a>,
+                                                                                <a href="#">Planting</a>
+                                                                            </div>
+                                                                            <span class="price">
+                                                                                <span class="amount">&euro;6.70</span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="product has-post-thumbnail">
+                                                                    <div class="post_item_wrap">
+                                                                        <div class="post_featured">
+                                                                            <div class="post_thumb">
+                                                                                <img src="{% static 'site/img/15-570x703.jpg' %}" class="" alt="15" />
+                                                                                <div class="woo_thumb_buttons">
+                                                                                    <div class="quick_view_images">
+                                                                                        <a href="{% static 'site/img/15.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1" title="">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="post_content">
+                                                                            <h3>
+                                                                                <a href="#">Apetito Pure Fruit Juice</a>
+                                                                            </h3>
+                                                                            <div class="product_cats">
+                                                                                <a href="#">Organic Dairy</a>,
+                                                                                <a href="#">Planting</a>
+                                                                            </div>
+                                                                            <div class="star-rating" title="Rated 1 out of 5">
+                                                                                <span>
+                                                                                    <strong class="rating">1</strong> out
+                                                                                    of 5
+                                                                                </span>
+                                                                            </div>
+                                                                            <span class="price">
+                                                                                <span class="amount">&euro;6.70</span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="sc_title sc_title_style_3">TOP SELLERS</div>
+                                                <aside id="text-6" class="widget widget_text">
+                                                    <div class="textwidget">
+                                                        <div class="woocommerce">
+                                                            <ul class="products">
+                                                                <li class="product has-post-thumbnail">
+                                                                    <div class="post_item_wrap">
+                                                                        <div class="post_featured">
+                                                                            <div class="post_thumb">
+                                                                                <img src="{% static 'site/img/7-570x703.jpg' %}" class="" alt="7" />
+                                                                                <div class="woo_thumb_buttons">
+                                                                                    <div class="quick_view_images">
+                                                                                        <a href="{% static 'site/img/7.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1" title="">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="post_content">
+                                                                            <h3>
+                                                                                <a href="#">Organic Protein Powder</a>
+                                                                            </h3>
+                                                                            <div class="product_cats">
+                                                                                <a href="#">Cereals</a>,
+                                                                                <a href="#">Fresh Meal</a>
+                                                                            </div>
+                                                                            <div class="star-rating" title="Rated 5 out of 5">
+                                                                                <span>
+                                                                                    <strong class="rating">5</strong> out
+                                                                                    of 5</span>
+                                                                            </div>
+                                                                            <span class="price">
+                                                                                <span class="amount">&euro;9.99</span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="product has-post-thumbnail">
+                                                                    <div class="post_item_wrap">
+                                                                        <div class="post_featured">
+                                                                            <div class="post_thumb">
+                                                                                <img src="{% static 'site/img/22-570x703.jpg' %}" class="" alt="22" />
+                                                                                <div class="woo_thumb_buttons">
+                                                                                    <div class="quick_view_images">
+                                                                                        <a href="{% static 'site/img/22.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1" title="">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="post_content">
+                                                                            <h3>
+                                                                                <a href="#">Organic Veggie Mix</a>
+                                                                            </h3>
+                                                                            <div class="product_cats">
+                                                                                <a href="#">Planting</a>
+                                                                            </div>
+                                                                            <span class="price">
+                                                                                <span class="amount">&euro;7.99</span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="sc_title sc_title_style_3">SALE PRODUCTS</div>
+                                                <aside id="text-5" class="widget widget_text">
+                                                    <div class="textwidget">
+                                                        <div class="woocommerce">
+                                                            <ul class="products">
+                                                                <li class="product has-post-thumbnail">
+                                                                    <div class="post_item_wrap">
+                                                                        <div class="post_featured">
+                                                                            <div class="post_thumb">
+                                                                                <span class="onsale">Sale!</span>
+                                                                                <img src="{% static 'site/img/26-570x703.jpg' %}" class="" alt="26" />
+                                                                                <div class="woo_thumb_buttons">
+                                                                                    <div class="quick_view_images">
+                                                                                        <a href="{% static 'site/img/26.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1" title="">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="post_content">
+                                                                            <h3>
+                                                                                <a href="#">Fresh Meal Kit</a>
+                                                                            </h3>
+                                                                            <div class="product_cats">
+                                                                                <a href="#">Fresh Meal</a>,
+                                                                                <a href="#">Organic Dairy</a>
+                                                                            </div>
+                                                                            <span class="price">
+                                                                                <del>
+                                                                                    <span class="amount">&euro;9.99</span>
+                                                                                </del>
+                                                                                <ins>
+                                                                                    <span class="amount">&euro;7.99</span>
+                                                                                </ins>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="product has-post-thumbnail">
+                                                                    <div class="post_item_wrap">
+                                                                        <div class="post_featured">
+                                                                            <div class="post_thumb">
+                                                                                <span class="onsale">Sale!</span>
+                                                                                <img src="{% static 'site/img/13-570x703.jpg' %}" class="" alt="13" />
+                                                                                <div class="woo_thumb_buttons">
+                                                                                    <div class="quick_view_images">
+                                                                                        <a href="{% static 'site/img/13.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1" title="">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="post_content">
+                                                                            <h3>
+                                                                                <a href="#">Organic Milk</a>
+                                                                            </h3>
+                                                                            <div class="product_cats">
+                                                                                <a href="#">Cereals</a>,
+                                                                                <a href="#">Organic Dairy</a>
+                                                                            </div>
+                                                                            <div class="star-rating" title="Rated 3 out of 5">
+                                                                                <span>
+                                                                                    <strong class="rating">3</strong> out
+                                                                                    of 5
+                                                                                </span>
+                                                                            </div>
+                                                                            <span class="price">
+                                                                                <del>
+                                                                                    <span class="amount">&euro;16.78</span>
+                                                                                </del>
+                                                                                <ins>
+                                                                                    <span class="amount">&euro;9.99</span>
+                                                                                </ins>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="sc_title sc_title_style_3">TOP RATE</div>
+                                                <aside id="text-4" class="widget widget_text">
+                                                    <div class="textwidget">
+                                                        <div class="woocommerce">
+                                                            <ul class="products">
+                                                                <li class="product has-post-thumbnail">
+                                                                    <div class="post_item_wrap">
+                                                                        <div class="post_featured">
+                                                                            <div class="post_thumb">
+                                                                                <img src="{% static 'site/img/7-570x703.jpg' %}" class="" alt="7" />
+                                                                                <div class="woo_thumb_buttons">
+                                                                                    <div class="quick_view_images">
+                                                                                        <a href="{% static 'site/img/7.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1" title="">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="post_content">
+                                                                            <h3>
+                                                                                <a href="#">Organic Protein Powder</a>
+                                                                            </h3>
+                                                                            <div class="product_cats">
+                                                                                <a href="#">Cereals</a>,
+                                                                                <a href="#">Fresh Meal</a>
+                                                                            </div>
+                                                                            <div class="star-rating" title="Rated 5 out of 5">
+                                                                                <span>
+                                                                                    <strong class="rating">5</strong> out
+                                                                                    of 5
+                                                                                </span>
+                                                                            </div>
+                                                                            <span class="price">
+                                                                                <span class="amount">&euro;9.99</span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="product has-post-thumbnail">
+                                                                    <div class="post_item_wrap">
+                                                                        <div class="post_featured">
+                                                                            <div class="post_thumb">
+                                                                                <span class="onsale">Sale!</span>
+                                                                                <img src="{% static 'site/img/26-570x703.jpg' %}" class="" alt="26" />
+                                                                                <div class="woo_thumb_buttons">
+                                                                                    <div class="quick_view_images">
+                                                                                        <a href="{% static 'site/img/26.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1" title="">Quick
+                                                                                            View</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="post_content">
+                                                                            <h3>
+                                                                                <a href="#">Fresh Meal Kit</a>
+                                                                            </h3>
+                                                                            <div class="product_cats">
+                                                                                <a href="#">Fresh Meal</a>,
+                                                                                <a href="#">Organic Dairy</a>
+                                                                            </div>
+                                                                            <span class="price">
+                                                                                <del>
+                                                                                    <span class="amount">&euro;9.99</span>
+                                                                                </del>
+                                                                                <ins>
+                                                                                    <span class="amount">&euro;7.99</span>
+                                                                                </ins>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="spb_25">
+                                    <div class="content_padder">
+                                        <div class="columns_wrap">
+                                            <div class="col-md-4">
+                                                <div class="sc_section banner_small_bg_1 banner_block" data-animation="animated fadeInUp normal">
+                                                    <div class="sc_section_inner">
+                                                        <div class="sc_section_overlay">
+                                                            <div class="sc_section_content">
+                                                                <span class="sc_icon icon-smiley3 alignleft"></span>
+                                                                <h4 class="sc_title sc_title_regular">Sale! Up to 50% off</h4>
+                                                                <p>For all products only NOW</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="sc_section banner_small_bg_2 banner_block" data-animation="animated fadeInUp normal">
+                                                    <div class="sc_section_inner">
+                                                        <div class="sc_section_overlay">
+                                                            <div class="sc_section_content">
+                                                                <span class="sc_icon icon-airplane116 alignleft"></span>
+                                                                <h4 class="sc_title sc_title_regular">FREE SHIPPING</h4>
+                                                                <p>For all orders over $100</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="sc_section banner_small_bg_3 banner_block" data-animation="animated fadeInUp normal">
+                                                    <div class="sc_section_inner">
+                                                        <div class="sc_section_overlay">
+                                                            <div class="sc_section_content">
+                                                                <span class="sc_icon icon-like83 alignleft"></span>
+                                                                <h4 class="sc_title sc_title_regular">Money back</h4>
+                                                                <p>If the item didn&#8217;t suit you</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+
+           <!-- <?= $this->render('@partials/footer.php') ?> -->
+
+        </div>
+
+    </div>
+
+    <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
+
+     {% endblock splash %} {% block container %}
+    <!-- Benefits of the Django application -->
+    <a name="about"></a>
+    {% endblock container %}

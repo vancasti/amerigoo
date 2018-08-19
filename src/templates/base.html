@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     {% load staticfiles %}
+    {% load compress %}
     {% load thumbnail %}
     
   <head>
@@ -19,7 +20,28 @@
     <!-- Custom styles for this site -->
     {% block styles %}
     <link href="{% static 'site/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'site/js/vendor/essential-grid/public/assets/css/settings.css' %}" rel="stylesheet">
+    <link href="{% static 'site/js/vendor/essential-grid/public/assets/css/lightbox.css' %}" rel="stylesheet">
+    <link href="{% static 'site/js/vendor/revslider/public/assets/css/settings.css' %}" rel="stylesheet">
+    <link href="{% static 'site/js/vendor/woocommerce/assets/css/woocommerce-layout.css' %}" rel="stylesheet">
+    <link href="{% static 'site/js/vendor/woocommerce/assets/css/woocommerce.css' %}" rel="stylesheet">
+    <link href="{% static 'site/js/vendor/woocommerce/assets/css/prettyPhoto.css' %}" rel="stylesheet">
+    <link href="{% static 'site/js/vendor/swiper/swiper.css' %}" rel="stylesheet">
+    <link href="{% static 'site/css/fontello/css/fontello.css' %}" rel="stylesheet">
+    <link href="{% static 'site/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'site/css/core.animation.css' %}" rel="stylesheet">
+    <link href="{% static 'site/css/shortcodes.css' %}" rel="stylesheet">
+    <link href="{% static 'site/css/woo-style.css' %}" rel="stylesheet">
+    <link href="{% static 'site/css/skin.css' %}" rel="stylesheet">
+    <link href="{% static 'site/css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'site/css/skin.responsive.css' %}" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" rel="stylesheet" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     {% endblock styles %}
+    {% compress css %}
+    <link href="{% static 'site/css/custom.less' %}" media="all" rel="stylesheet" type="text/less" /> 
+    <link href="{% static 'site/css/custom-responsive.less' %}" media="all" rel="stylesheet" type="text/less" />
+    {% endcompress %}
 
     <!-- Custom tags for the head tag -->
     {% block extrahead %}{% endblock extrahead %}
@@ -108,18 +130,83 @@
 
     <!-- Site footer -->
     {% block footer %}
+    <footer class="footer_wrap widget_area scheme_original mt_80">
+        <div class="container">
+          <div class="row">
+    
+            <aside class="col-md-3">
+              <div class="logo">
+                  <a class="navbar-brand pd-0" href="{% url 'shop' %}">
+                    <img src="/static/site/img/logo.png" alt="logo"> Amerigoo
+                  </a>
+                </a>
+              </div>
+            </aside>
+    
+            <aside class="col-md-3 widget widget_recent_posts">
+              <h5 class="widget_title">Informacion</h5>
+              <article class="post_item with_thumb first">
+                <div class="post_content">
+                  <h6 class="post_title">
+                    <a href="{% url 'about' %}">Sobre nosotros</a>
+                  </h6>
+                </div>
+              </article>
+              <article class="post_item with_thumb">
+                <div class="post_content">
+                  <h6 class="post_title">
+                    <a href="{% url 'about' %}">Contacto</a>
+                  </h6>
+                </div>
+              </article>
+            </aside>
+    
+            <aside class="col-md-3 widget widget_socials">
+              <h5 class="widget_title">Siguenos</h5>
+    
+              <div class="widget_inner">
+                <div class="logo_descr">Mantente informado a través de nuestros canales de redes sociales para formar parte de
+                  la mejor experiencia gastronómica.
+                </div>
+                <div class="sc_socials sc_socials_type_icons sc_socials_shape_round sc_socials_size_tiny">
+                  <div class="sc_socials_item">
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i> Facebook</a>
+                  </div>
+                  <div class="sc_socials_item">
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i> Twitter</a>
+                  </div>
+                  <div class="sc_socials_item">
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i> Instagram</a>
+                  </div>
+                </div>
+              </div>
+            </aside>
+    
+            <aside class="col-md-3 widget widget_socials">
+              <h5 class="widget_title">Comunidad</h5>
+    
+              <div class="logo_descr">Forma parte de nuestra comunidad en telegram, donde podrás tener contacto directo con amantes
+                de la gastronomía como tú y con productores.
+              </div>
+              <div class="sc_socials">
+                  <a href="#"><i class="fab fa-telegram fa-2x"></i>Telegram</a>
+              </div>
+            </aside>
+    
+          </div>
+        </div>
+    </footer>
+  
       <!-- Some social button for contact will do -->
       <a name="contact"></a>
       <div class="container">
             <div class="footer">
         <div class="row">
           <div class="col-lg-6">
-              <p>&copy; Company {% now 'Y' %}</p>
+              <p>&copy; Amerigoo {% now 'Y' %}</p>
           </div>
           <div class="col-lg-6 text-right">
-            Connect with us on
-            <a href="#"><i class="fa fa-facebook"></i> Facebook</a> or
-            <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+             &copy; Todos los derechos reservados.
           </div>
         </div>
             </div>
@@ -132,6 +219,30 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     {% block scripts %}
+    <script src="{% static 'site/js/site.js' %}"></script>
+    <script src="{% static 'site/js/vendor/_packed.js' %}"></script>
+    <script src="{% static 'site/js/vendor/essential-grid/public/assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'site/js/vendor/essential-grid/public/assets/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/essential-grid/public/assets/js/jquery.themepunch.essential.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/revslider/public/assets/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/revslider/public/assets/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/revslider/public/assets/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/revslider/public/assets/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'site/js/custom/_main.js' %}"></script>
+    <script src="{% static 'site/js/custom/core.utils.js' %}"></script>
+    <script src="{% static 'site/js/custom/core.init.js' %}"></script>
+    <script src="{% static 'site/js/custom/shortcodes.js' %}"></script>
+    <script src="{% static 'site/js/vendor/photostack/modernizr.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/superfish.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/jquery.slidemenu.js' %}"></script>
+    <script src="{% static 'site/js/vendor/woocommerce/assets/js/jquery.prettyPhoto.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/woocommerce/assets/js/jquery.prettyPhoto.init.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/swiper/swiper.js' %}"></script>
+    <script src="{% static 'site/js/vendor/widget.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/core.min.js' %}"></script>
+    <script src="{% static 'site/js/vendor/tabs.min.js' %}"></script> 
     {% endblock scripts %}
   </body>
 </html>
