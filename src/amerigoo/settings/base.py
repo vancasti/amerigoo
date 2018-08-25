@@ -59,6 +59,8 @@ if env_file.exists():
 # Raises ImproperlyConfigured exception if SECRET_KEY not in os.environ
 SECRET_KEY = env('SECRET_KEY')
 
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Lc3d2sUAAAAAETxRNNfXY9F4mtsZxF-uxkjwn6u'
+
 ALLOWED_HOSTS = []
 
 # Application definition

@@ -1219,6 +1219,7 @@ button.sc_button_size_large,
 .sc_form_style_form_2 .sc_form_item select,
 .sc_form_style_form_2 .sc_form_item textarea {
 	text-align:left;
+	border: 1px solid #ddd;
 }
 
 
@@ -3467,7 +3468,7 @@ ul.sc_list_style_iconed {
 }
 
 .sc_testimonials_bg_1 {
-	background-image:url(../images/image-17.jpg);
+	background-image:url(../img/image-17.jpg);
 	background-size: cover;
 }
 

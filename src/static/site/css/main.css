@@ -119,6 +119,15 @@ body>.navbar-transparent {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQIW2NkAIILFy78NzAwYATRjCABZEGwAEwFiA1WBlIOUwkA72gTdDIYVO4AAAAASUVORK5CYII=) repeat;
 }
 
+.about-section {
+    background-image:url(../img/ham-699428_1280.jpg);
+}
+
+.contact-section {
+    background-image:url(../img/m4kpa7nc-l0-neven-krcmarek.jpg);
+    background-size: 100%;
+}
+
 /* Profile page styling */
 .profile-head {
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQIW2NkAIILFy78NzAwYATRjCABZEGwAEwFiA1WBlIOUwkA72gTdDIYVO4AAAAASUVORK5CYII=) repeat;

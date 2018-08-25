@@ -3,8 +3,12 @@ from django.views import generic
 from django.shortcuts import get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.core.mail import send_mail
 from . import forms
 from . import models
+from .forms import ContactForm
 
 
 class ShowProfile(LoginRequiredMixin, generic.TemplateView):

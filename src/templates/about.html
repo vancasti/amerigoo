@@ -12,93 +12,183 @@
 <!-- Benefits of the Django application -->
 {% block container %}
 
-<div id="sec1" class="text-page">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h1>{% include "_brandname.html" %}</h1>
-        <p class="lead">An Awesome Tagline Goes Here</p>
-      </div>
-    </div>
-  </div>
-</div>
+<body class="page body_filled article_style_stretch top_panel_above sidebar_hide">
 
-<div id="sec2" class="text-page">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h2>Meet The Team</h2>
-        <p class="lead">The Wonderful People Behind the Site</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/9/" alt="profile pic"></div>
-        <p class="heavy text-center">Cassidy Coder</p>
-        <h2>Front-end developer</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      </div>
-      <div class="col-lg-4">
-        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/2/" alt="profile pic"></div>
-        <p class="heavy text-center">James King</p>
-        <h2>CEO</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      </div>
-      <div class="col-lg-4">
-        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/1/" alt="profile pic"></div>
-        <p class="heavy text-center">Kate Lamport</p>
-        <h2>Front-end designer</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
+  <div class="body_wrap">
+    <div class="page_wrap">
+      <div class="top_panel_fixed_wrap"></div>
 
-<div id="sec3">
-  <div class="container">
-    <div class="row">
-      <div id="map-outer" class="col-md-12">
-        <div id="address" class="col-md-4">
-          <h2>Our Location</h2>
-          <address>
-            <strong>Edge Solutions Ltd.</strong><br>
-            Taj Mahal<br>
-            Agra<br>
-            Uttar Pradesh<br>
-            India - 282001<br>
-            <abbr>P:</abbr> +91 0562 222 6431
-          </address>
+      <header class="top_panel_wrap top_panel_style_8 top_panel_style_4 scheme_original">
+        <div class="top_panel_wrap_inner top_panel_inner_style_8 top_panel_inner_style_4 top_panel_position_above">
+          <!--<?= $this->render('@partials/topbar.php') ?>
+          <?= $this->render('@partials/menu.php') ?>
+          <?= $this->render('@partials/menu_mobile.php') ?> -->
         </div>
-        <div id="map-container" class="col-md-8"></div>
+      </header>
+
+      <div class="text-page about-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h1>{% include "_brandname.html" %}</h1>
+              <p class="lead">Sobre el proyecto</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!--<?= $this->render('@partials/breadcrumb.php', ['showTitle' => true]) ?> -->
+
+      <div class="page_content_wrap page_paddings_no">
+        <div class="content_wrap">
+          <div class="content">
+            <article class="post_item post_item_single page">
+              <div class="post_content">
+
+                <section class="col-md-12">
+                  <div class="row">
+                    <h2 class="sc_title mb_20 sc_text_center">Bienvenidos al mercado gastronómico tradicional</h2>
+
+                    <div class="col-md-6">
+                      <div class="sc_section aligncenter">
+                        <div class="sc_section_inner">
+                          <figure class="sc_image sc_image_shape_square">
+                            <img src="{% static 'site/img/image-22.jpg' %}" alt="" />
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="sc_section">
+                        <div class="sc_section_inner">
+                          <span class="sc_icon sc_icon_style_1 icon-home-1 alignleft">
+                          </span>
+
+                          <div class="lh24 mb_15">
+                            <p class="text-justify">Nuestra idea es la creación de una <b>comunidad interesada</b> por la
+                              gastronomía o productos típicos de los diferentes lugares de la Península. Creando un <b>proyecto
+                                sostenible</b> sin destruir a los proveedores y haciendo llegar la máxima calidad al usuario.</p>
+                          </div>
+                          <span class="sc_icon sc_icon_style_1 icon-sprig2 alignleft">
+                          </span>
+
+                          <div class="lh24 mb_15">
+                            <p class="text-justify">Nuestros <b>productos</b> llevan una elaboración totalmente artesanal
+                              con una gran tradición a lo largo de años, por ese motivo, nos los recomiendan nuestros propios
+                              clientes. Intentamos crear una <b>sinergía gastronómica</b>
+                              en la que prima la calidad y el comercio justo.</p>
+                          </div>
+                          <span class="sc_icon sc_icon_style_1 icon-users-1 alignleft">
+                          </span>
+
+                          <div class="lh24">
+                            <p class="text-justify">Nuestra mayor fuerza son los clientes y queremos utilizar su mejor arma,
+                              los <b>comentarios</b> respaldando los productos que mejor <b>calidad y servicio</b> tengan. Nuestros usuarios son
+                              exigentes, buscan un precio ajustado a una calidad digna que les haga disfrutar el auténtico
+                              sabor tradicional.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </section>
+
+                <div class="col-md-12 scheme_original">
+                  <div class="footer_shortcode_area">
+                    <h3 class="sc_title mt_50 mb_20">Lo que opinan nuestros clientes</h3>
+                    <div class="sc_testimonials_wrap sc_section sc_testimonials_bg_1 mb_20">
+                      <div class="sc_section_overlay">
+                        <div class="sc_testimonials sc_testimonials_style_testimonials-4  sc_slider_swiper swiper-slider-container sc_slider_pagination sc_slider_pagination_bottom sc_slider_nocontrols sc_slider_nopagination sc_slider_controls sc_slider_controls_bottom sc_slider_height_auto aligncenter"
+                          data-interval="7000" data-slides-per-view="3" data-slides-min-width="250">
+                          <div class="slides swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="sc_testimonial_item">
+                                <div class="sc_testimonial_content">
+                                  <p>Me and my partners have found our relationship with this team to be a mututally beneficial experience.</p>
+                                </div>
+                                <div class="sc_testimonial_avatar">
+                                  <img width="75" height="75" alt="High speed and quality" src="{% static 'site/img/team-1_small-75x75.jpg' %}" />
+                                </div>
+                                <div class="sc_testimonial_author">
+                                  <span class="sc_testimonial_author_name">Martin Moore</span>
+                                  <span class="sc_testimonial_author_position">manager</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="sc_testimonial_item">
+                                <div class="sc_testimonial_content">
+                                  <p>Thank you for your outstanding WordPress products and services, AxiomThemes! We highly appreciate your
+                                    work.</p>
+                                </div>
+                                <div class="sc_testimonial_avatar">
+                                  <img width="75" height="75" alt="Thank you" src="{% static 'site/img/team-3_small-75x75.jpg' %}" />
+                                </div>
+                                <div class="sc_testimonial_author">
+                                  <span class="sc_testimonial_author_name">John Snow</span>
+                                  <span class="sc_testimonial_author_position">photographer</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="sc_testimonial_item">
+                                <div class="sc_testimonial_content">
+                                  <p>I love this store. I am always able to find fresh and clean produce for me and my family. Simply love
+                                    it! Highly Recommended.</p>
+                                </div>
+                                <div class="sc_testimonial_avatar">
+                                  <img width="75" height="75" alt="I like your store" src="{% static 'site/img/team-4_small-75x75.jpg' %}" />
+                                </div>
+                                <div class="sc_testimonial_author">
+                                  <span class="sc_testimonial_author_name">Lisa Kudrow</span>
+                                  <span class="sc_testimonial_author_position">manager</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="sc_testimonial_item">
+                                <div class="sc_testimonial_content">
+                                  <p>Organic Store is the greatest online health food shop. I've been their loyal customer for years and
+                                    I'm always going to be one.</p>
+                                </div>
+                                <div class="sc_testimonial_avatar">
+                                  <img width="75" height="75" alt="The best company" src="{% static 'site/img/team-2_small-75x75.jpg' %}" />
+                                </div>
+                                <div class="sc_testimonial_author">
+                                  <span class="sc_testimonial_author_name">Sarah Jefferson</span>
+                                  <span class="sc_testimonial_author_position">designer</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sc_slider_controls_wrap">
+                            <a class="sc_slider_prev" href="#"></a>
+                            <a class="sc_slider_next" href="#"></a>
+                          </div>
+                          <div class="sc_slider_pagination_wrap"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+      <!--<?= $this->render('@partials/footer.php') ?> -->
+
     </div>
+
   </div>
-</div>
+
+  <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
+
+</body>
 {% endblock container %}
-
-{% block scripts %}
-  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-  <script>
-
-   function init_map() {
-     // Enter the latitude and longitude of your office here
-	 var myLocation = new google.maps.LatLng(27.176141, 78.042370);
-
-     var mapOptions = {
-          center: myLocation,
-          zoom: 14
-     };
-
-	 var marker = new google.maps.Marker({
-	   position: myLocation,
-	   title:"We are here"});
-
-     var map = new google.maps.Map(document.getElementById("map-container"),
-                                   mapOptions);
-	 marker.setMap(map);
-   }
-
-   google.maps.event.addDomListener(window, 'load', init_map);
-  </script>
-{% endblock scripts %}

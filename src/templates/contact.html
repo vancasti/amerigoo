@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}About{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="about" %}
+{% endblock %}
+
+<!-- Benefits of the Django application -->
+{% block container %}
+
+<body class="page body_filled article_style_stretch top_panel_above sidebar_hide">
+
+  <div class="body_wrap">
+    <div class="page_wrap">
+      <div class="top_panel_fixed_wrap"></div>
+
+      <header class="top_panel_wrap top_panel_style_8 top_panel_style_4 scheme_original">
+        <div class="top_panel_wrap_inner top_panel_inner_style_8 top_panel_inner_style_4 top_panel_position_above">
+          <!--<?= $this->render('@partials/topbar.php') ?>
+          <?= $this->render('@partials/menu.php') ?>
+          <?= $this->render('@partials/menu_mobile.php') ?> -->
+        </div>
+      </header>
+
+      <div class="text-page contact-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h1 class="white">{% include "_brandname.html" %}</h1>
+              <p class="lead white">Contacta con nosotros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--<?= $this->render('@partials/breadcrumb.php', ['showTitle' => true]) ?> -->
+
+      <div class="page_content_wrap page_paddings_no">
+        <div class="content">
+          <article class="post_item post_item_single page">
+            <div class="post_content">
+              <section class="spt_80">
+                <div class="container">
+                  <div class="row">
+                    <div class="sc_form_wrap">
+                      <div class="sc_form sc_form_style_form_2">
+                        <h6 class="sc_form_subtitle sc_item_subtitle">contacto</h6>
+      
+                        <h2 class="sc_form_title sc_item_title">
+                          <b>Contacta</b> con nosotros
+                        </h2>
+      
+                        <div class="sc_form_descr sc_item_descr">Tanto si eres proveedor o cliente estamos abiertos a cualquier tipo
+                          de idea o sugerencia.
+                        </div>
+      
+                        <div class="container">
+                          <div class="row">
+      
+                            <div class="sc_form_address col-md-3">
+                              <!--<div class="sc_form_address_field">
+                                                                      <span class="sc_form_address_icon">
+                                                                      </span>
+                                                          <span class="sc_form_address_label">Address</span>
+                                                          <span
+                                                              class="sc_form_address_data">Chicagi, IL, 55030, 8500 Lorem Street</span>
+                                                      </div>-->
+                              <!--<div class="sc_form_address_field">
+                                                                      <span class="sc_form_address_icon">
+                                                                      </span>
+                                                          <span class="sc_form_address_label">Phone number</span>
+                                                          <span class="sc_form_address_data">(123) 456-78-90, 123-456-7890</span>
+                                                      </div>-->
+                              <div class="sc_form_address_field">
+                                <span class="sc_form_address_icon">
+                                </span>
+                                <span class="sc_form_address_label">Para cualquier información</span>
+                                <span class="sc_form_address_data">
+                                  <a href="mailto:sales@example.com">info@muverico.com</a>
+                                </span>
+                              </div>
+                              <div class="sc_form_address_field">
+                                <span class="sc_form_address_icon">
+                                </span>
+                                <span class="sc_form_address_label">Estamos disponibles</span>
+                                <span class="sc_form_address_data">365 días - 24h</span>
+                              </div>
+                              <div class="sc_socials sc_socials_type_icons sc_socials_shape_round sc_socials_size_tiny">
+                                <div class="sc_socials_item">
+                                  <a href="#" target="_blank" class="social_icons social_facebook">
+                                    <span class="icon-facebook"></span>
+                                  </a>
+                                </div>
+                                <div class="sc_socials_item">
+                                  <a href="#" target="_blank" class="social_icons social_twitter-1">
+                                    <span class="icon-twitter-1"></span>
+                                  </a>
+                                </div>
+                                <div class="sc_socials_item">
+                                  <a href="#" target="_blank" class="social_icons social_instagram">
+                                    <span class="icon-instagram"></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+      
+                            <div class="sc_form_fields col-md-6">
+                              <form action="/contact/" method="post">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <script src='https://www.google.com/recaptcha/api.js'></script>
+                                <div class="g-recaptcha" data-sitekey="6Lc3d2sUAAAAAFzuUDBZI4miAFwtkPK8IegBMtor"></div>
+                                <br/>
+                                <input type="submit" value="Send">
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+      </div>
+    </body>
+{% endblock container %}
