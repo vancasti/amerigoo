@@ -32,13 +32,14 @@ class ProfileForm(forms.ModelForm):
         self.helper.form_tag = False
         self.helper.layout = Layout(
             Field('picture'),
+            Field('birthdate'),
             Field('bio'),
             Submit('update', 'Update', css_class="btn-success"),
         )
 
     class Meta:
         model = models.Profile
-        fields = ['picture', 'bio']
+        fields = ['picture', 'birthdate', 'bio']
 
 
 class ContactForm(forms.Form):

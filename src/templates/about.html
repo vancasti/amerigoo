@@ -2,6 +2,7 @@
 
 {% load staticfiles %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}{{ block.super }}About{% endblock %}
 
@@ -31,7 +32,7 @@
           <div class="row">
             <div class="col-md-12 text-center">
               <h1>{% include "_brandname.html" %}</h1>
-              <p class="lead">Sobre el proyecto</p>
+              <p class="lead">{% trans 'About the project' %}</p>
             </div>
           </div>
         </div>
@@ -47,7 +48,7 @@
 
                 <section class="col-md-12">
                   <div class="row">
-                    <h2 class="sc_title mb_20 sc_text_center">Bienvenidos al mercado gastronómico tradicional</h2>
+                    <h2 class="sc_title mb_20 sc_text_center">{% trans 'Welcome to the traditional gastronomic market' %}</h2>
 
                     <div class="col-md-6">
                       <div class="sc_section aligncenter">
