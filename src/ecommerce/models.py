@@ -37,6 +37,9 @@ class Product(TimeStampedModel):
 class ProductCategory(models.Model):
     name = models.CharField(max_length=60)
 
+    def __str__(self):
+        return self.name[:50]
+
     class Meta:
         verbose_name_plural = "Product Categories"
 

@@ -15,7 +15,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 STATICFILES_DIRS = [str(BASE_DIR / 'static'), ]
 MEDIA_ROOT = str(BASE_DIR / 'media')
-MEDIA_URL = "/media/"
+MEDIA_URL = '/media/'
 
 # Use Django templates using the new Django 1.8 TEMPLATES settings
 TEMPLATES = [
@@ -36,6 +36,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
+                'django.template.context_processors.request',
                 'django.contrib.messages.context_processors.messages',
                 'django_react_templatetags.context_processors.react_context_processor',
             ],
@@ -76,6 +77,7 @@ INSTALLED_APPS = (
     'authtools',
     'crispy_forms',
     'easy_thumbnails',
+    'sitetree',
     'django_react_templatetags',
     #'rest_framework',
     #'corsheaders',
@@ -147,7 +149,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-LOCALE_PATHS = [str(BASE_DIR / 'locale')]
+LOCALE_PATHS = [
+    'locale',
+    'accounts/locale',
+    'amerigoo/locale',
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/

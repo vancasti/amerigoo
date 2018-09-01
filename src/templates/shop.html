@@ -1,7 +1,8 @@
 {% extends "base.html" %} 
 
 {% load staticfiles %} 
-{% load crispy_forms_tags %} 
+{% load crispy_forms_tags %}
+{% load sitetree %}
 
 {% block title %}
 {{ block.super }} Home {%endblock%} 
@@ -26,7 +27,8 @@
 
             <header class="top_panel_wrap top_panel_style_4 scheme_original">
                 <div class="top_panel_wrap_inner top_panel_inner_style_4 top_panel_position_above">
-                   <!-- <?= $this->render('@partials/topbar.php') ?>
+                    <!-- {% include "_menu.html" %}
+                    <!-- <?= $this->render('@partials/topbar.php') ?>
                     <?= $this->render('@partials/menu_shop.php') ?>
                     <?= $this->render('@partials/menu_mobile.php') ?> -->
                 </div>

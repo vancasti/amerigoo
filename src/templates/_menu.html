@@ -1,3 +1,5 @@
+{% load sitetree %}
+
 <header class="top_panel_wrap top_panel_style_7 scheme_original">
     <div class="top_panel_wrap_inner top_panel_inner_style_7 top_panel_position_over">
 
@@ -13,6 +15,7 @@
                         </div>
                     </div>
                     <div class="col-md-10 menu_main_wrap">
+                         {% sitetree_menu from "main-menu" include "trunk" %}
                         <!--<?php if (Url::current() == '/site/index') : ?> -->
                         <!--                        <div class="menu_main_cart top_panel_icon">-->
                         <!--                            <a href="#" class="top_panel_cart_button" data-items="0" data-summa="&euro;0.00">-->

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-31 08:39+0200\n"
+"POT-Creation-Date: 2018-09-01 12:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: amerigoo/settings/base.py:136
+
+#: amerigoo/settings/base.py:138
 msgid "English"
 msgstr "Inglés"
 
-#: amerigoo/settings/base.py:137
+#: amerigoo/settings/base.py:139
 msgid "Spanish"
 msgstr "Español"
+
+#: amerigoo/urls.py:27
+msgid "admin/"
+msgstr ""
+
+#: amerigoo/urls.py:28
+msgid "about"
+msgstr "nosotros"
