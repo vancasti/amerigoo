@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}About{% endblock %} 
+
+{% block navbar-left %} 
+    {% include "_navbar.html" with active_link="about" %} 
+{% endblock %}
+
+{% block container %}
+<body class="page body_filled article_style_stretch top_panel_above sidebar_hide">
+    <div class="page_content_wrap">
+        <div class="container">
+            <h2><a href="{% url 'profiles:show_self' %}">Mi cuenta</a><small> \ Proceso de Compra</small></h2>
+            <div class="row">
+                <div class="col-md-9">
+                    {% include "_payment.html" %}
+                </div>
+                <div class="col-md-3">
+                    {% include "_resume.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock container %}

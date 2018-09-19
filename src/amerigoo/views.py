@@ -3,6 +3,7 @@ import urllib
 from django.views import generic
 from django import forms
 from .forms import ContactForm
+from ecommerce.models import Product, Order
 from django.conf import settings
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404, redirect
@@ -13,14 +14,22 @@ from django.http import HttpResponseRedirect
 class HomePage(generic.TemplateView):
     template_name = "home.html"
 
-
 class ShopPage(generic.TemplateView):
-    template_name = "shop.html"
 
+    def get(self, request):
+        products_best_selling = Product.objects.all()
+    
+        context = {
+            'products_best_selling': products_best_selling,
+        }
+
+        return render(request, "shop.html", context)
+
+class CheckoutPage(generic.TemplateView):
+    template_name = "checkout.html"
 
 class AboutPage(generic.TemplateView):
     template_name = "about.html"
-
 
 class ContactFormView(generic.View):
     template_name = "contact.html"

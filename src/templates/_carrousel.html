@@ -1,0 +1,63 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<section class="sp_20">
+    <div>
+        <h3 class="sc_title mt_35 mb_20" data-animation="animated fadeIn normal">{% trans title %}</h3>
+        <article class="myportfolio-container shop-organics" id="esg-grid-19-1-wrap">
+            <div id="{{ grid }}" class="esg-grid">
+                <article class="esg-filters esg-singlefilters right">
+                    <div class="esg-navigationbutton esg-left esg-fgc-19">
+                        <i class="eg-icon-left-open"></i>
+                    </div>
+                    <div class="esg-navigationbutton esg-right {{ nav }}">
+                        <i class="eg-icon-right-open"></i>
+                    </div>
+                </article>
+                <div class="esg-clear-no-height"></div>
+                <ul>
+                    {% for product in products %}
+                    <li class="filterall eg-arthur-organic-wrapper" data-date="1441459331">
+                        <div class="esg-media-cover-wrapper">
+                            <div class="esg-entry-media">
+                                <img src="{{ MEDIA_URL }}{{ product.photo }}" alt="">
+                            </div>
+                            <div class="esg-entry-cover esg-fade" data-delay="0">
+                                <div class="esg-overlay esg-fade eg-arthur-organic-container" data-delay="0">
+                                </div>
+                                <div class="esg-center eg-arthur-organic-element-32-a esg-slideup" data-delay="0.1">
+                                    <a class="eg-arthur-organic-element-32 esgbox" href="{{ MEDIA_URL }}{{ product.photo }}" title="Fresh Meal Kit">
+                                        {% trans 'Quick View' %}
+                                    </a>
+                                </div>
+                                <div class="esg-center eg-arthur-organic-element-34 esg-none esg-clear"></div>
+                                <div class="esg-center eg-arthur-organic-element-28-a esg-slideup" data-delay="0.25">
+                                    <a href="{% url 'ecommerce:add_to_cart' product.id %}" class="eg-arthur-organic-element-28 button add_to_cart_button">{% trans 'Add to cart' %}</a>
+                                </div>
+                            </div>
+                            <div class="esg-entry-content eg-arthur-organic-content">
+                                <div class="esg-content eg-arthur-organic-element-36-a">
+                                    <a class="eg-arthur-organic-element-36" href="#" target="_self">{{ product.name }}</a>
+                                </div>
+                                <div class="esg-content eg-arthur-organic-element-1-a">
+                                    <a class="eg-arthur-organic-element-1" href="#" rel="tag">{{ product.category.name }}
+                                    </a>
+                                </div>
+                                <div class="esg-content eg-arthur-organic-element-25">
+                                    <!--<del>
+                                        <span class="amount">&euro;9.99</span>
+                                    </del> -->
+                                    <ins>
+                                        <span class="amount">{{ product.unit_price | floatformat:2 }} &euro;</span>
+                                    </ins>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </article>
+        <div class="clear"></div>
+    </div>
+</section>

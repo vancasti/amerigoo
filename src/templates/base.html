@@ -17,6 +17,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/jquery.bootstrap-touchspin.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this site -->
     {% block styles %}
@@ -45,7 +46,11 @@
     {% endcompress %}
 
     <!-- Custom tags for the head tag -->
-    {% block extrahead %}{% endblock extrahead %}
+    {% block extrahead %}
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/jquery.bootstrap-touchspin.min.js' %}"></script>
+    {% endblock extrahead %}
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -78,6 +83,9 @@
             {% block navbar-left %}{% endblock %}
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <a href="{% url 'ecommerce:cart' %}">
+              <span class="sc_icon btn-cart icon-shopping-cart13 alignleft"></span>
+            </a>
             {% block navbar-right %}
               {% if user.is_authenticated %}
                 {% if user.is_staff %}
@@ -234,8 +242,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     {% block scripts %}
     <script src="{% static 'site/js/site.js' %}"></script>
     <script src="{% static 'site/js/vendor/_packed.js' %}"></script>

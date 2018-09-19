@@ -1,0 +1,86 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Método de pago</h3>
+    </div>
+    <div class="panel-body">
+        <form id="payment-form" action="/cart/checkout" method="post">
+            <input type="hidden" name="_csrf" value="HjUgqarPS2T5HHa5bfNk8V4sX2fNNlUvtbJsiyI5doBIBBbn5rsmHY9pNYlehBHEDBxqHoV3AG7R8Vj4FnQayQ==">
+            <div class="payment">
+                <div class="row">
+                    <div class="col-lg-5">
+
+                        <div class="form-group field-paymentform-card_holder required">
+                            <label class="control-label" for="paymentform-card_holder">Titular de la tarjeta</label>
+                            <input type="text" id="paymentform-card_holder" class="form-control" name="PaymentForm[card_holder]" aria-required="true">
+
+                            <p class="help-block help-block-error" lingdex="0"></p>
+                        </div>
+                        <div class="form-group field-paymentform-card_number required">
+                            <label class="control-label" for="paymentform-card_number">Número de la tarjeta</label>
+                            <input type="text" id="paymentform-card_number" class="form-control" name="PaymentForm[card_number]" aria-required="true">
+
+                            <p class="help-block help-block-error" lingdex="1"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-group">
+
+                            <label>Válido hasta</label>
+                            <div class="form-group field-paymentform-card_expired_month required">
+
+                                <select id="paymentform-card_expired_month" class="form-control" name="PaymentForm[card_expired_month]" aria-required="true">
+                                    <option value="0">01</option>
+                                    <option value="1">02</option>
+                                    <option value="2">03</option>
+                                    <option value="3">04</option>
+                                    <option value="4">05</option>
+                                    <option value="5">06</option>
+                                    <option value="6">07</option>
+                                    <option value="7">08</option>
+                                    <option value="8" selected="">09</option>
+                                    <option value="9">10</option>
+                                    <option value="10">11</option>
+                                    <option value="11">12</option>
+                                </select>
+
+                                <p class="help-block help-block-error" lingdex="2"></p>
+                            </div>
+                            <div class="form-group field-paymentform-card_expired_year required">
+
+                                <select id="paymentform-card_expired_year" class="form-control" name="PaymentForm[card_expired_year]" aria-required="true">
+                                    <option value="0">2028</option>
+                                    <option value="1">2027</option>
+                                    <option value="2">2026</option>
+                                    <option value="3">2025</option>
+                                    <option value="4">2024</option>
+                                    <option value="5">2023</option>
+                                    <option value="6">2022</option>
+                                    <option value="7">2021</option>
+                                    <option value="8">2020</option>
+                                    <option value="9">2019</option>
+                                    <option value="10" selected="">2018</option>
+                                </select>
+
+                                <p class="help-block help-block-error" lingdex="3"></p>
+                            </div>
+                        </div>
+                        <div class="form-group" style="clear:both;padding-top: 5px;">
+
+                            <div class="form-group field-paymentform-card_ccv required">
+                                <label class="control-label" for="paymentform-card_ccv">Dígitos de control</label>
+                                <input type="text" id="paymentform-card_ccv" class="form-control" name="PaymentForm[card_ccv]" style="width:49%;" aria-required="true">
+
+                                <p class="help-block help-block-error" lingdex="4"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <img src="/images/AmericanExpress.png" alt=""><img src="/images/MasterCard.png" alt=""><img src="/images/Visa.png"
+            alt=""><br> * Los datos de la tarjeta se enviarán de manera segura.
+
+
+
+    </div>
+</div>

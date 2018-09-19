@@ -15,11 +15,14 @@ admin.site.site_header = 'Amerigoo Administration'
 
 urlpatterns = [
     path('', views.HomePage.as_view(), name='home'),
+    path('', include(accounts.urls)),
+    path('checkout/', views.CheckoutPage.as_view(), name='checkout'),
+    path('contact/', views.ContactFormView.as_view(), name='contact'),
     path('i18n/', include('django.conf.urls.i18n')),
     path('shop/', views.ShopPage.as_view(), name='shop'),
-    path('contact/', views.ContactFormView.as_view(), name='contact'),
     path('users/', include(profiles.urls)),
-    path('', include(accounts.urls)),
+    path('', include('ecommerce.urls', namespace='ecommerce')),
+    url(r'^tinymce/', include('tinymce.urls')),
     #path('api/', include('ecommerce.urls')),
 ]
 

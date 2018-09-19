@@ -81,6 +81,7 @@ INSTALLED_APPS = (
     'django_react_templatetags',
     #'rest_framework',
     #'corsheaders',
+    'tinymce',
     'compressor',
     'profiles',
     'accounts',
@@ -177,3 +178,12 @@ LOGIN_REDIRECT_URL = '/shop'
 LOGIN_URL = reverse_lazy("accounts:login")
 
 THUMBNAIL_EXTENSION = 'png'     # Or any extn for your thumbnails
+
+#TinyMCE Config
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+    'width': 500,
+}

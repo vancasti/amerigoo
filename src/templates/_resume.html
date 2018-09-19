@@ -1,0 +1,52 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Resumen (2 productos)</h3>
+    </div>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td class="total-products">Subtotal:
+                    <div class="pull-right">0,00&nbsp;€</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="total-shipping">Gastos de envío:
+                    <div class="pull-right">0,00&nbsp;€</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="apply-discount">
+                    <form id="payment-form" class="form-vertical" action="/cart/index" method="post" role="form">
+                        <input type="hidden" name="_csrf" value="0XidwS0e979wSVzkKEdYJAXaErqnXFgHBkTEr1hxZ2qHSauPYWqaxgY8H9QbMC0RV-onw-8dDUZiB_DcbDwLIw=="><div
+                            class="form-group field-paymentform-card_ccv required">
+                            <label class="control-label" for="paymentform-card_ccv"><b>Aplicar cupón de descuento</b></label>
+
+                            <div class="input-group"><input type="text" id="paymentform-card_ccv" class="form-control"
+                                    name="PaymentForm[card_ccv]" aria-required="true"><span class="input-group-btn"><button
+                                        type="button" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i></button></span></div>
+
+                            <div class="help-block"></div>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="total-order">
+                    <b>Importe total (IVA Incluido)</b>
+                    <div class="pull-right">
+                        <h5 style="margin: 1.3em 0;">0,00&nbsp;€</h5>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="total-order">
+                    <div class="text-center">
+                        <a class="btn btn-success full-width" href="{% url 'checkout' %}">Tramitar pedido</a> </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

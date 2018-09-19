@@ -1,0 +1,75 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<div class="col-md-3">
+    <div class="sc_title sc_title_style_3">{% trans title|upper %}</div>
+    <aside class="widget widget_text">
+        <div class="textwidget">
+            <div class="woocommerce">
+                <ul class="products">
+                    <li class="product has-post-thumbnail">
+                        <div class="post_item_wrap">
+                            <div class="post_featured">
+                                <div class="post_thumb">
+                                    <img src="{% static 'site/img/9-570x703.jpg' %}" class="" alt="9" />
+                                    <div class="woo_thumb_buttons">
+                                        <div class="quick_view_images">
+                                            <a href="{% static 'site/img/9.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1"
+                                                title="">Quick View
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post_content">
+                                <h3>
+                                    <a href="#">Conconut Chips</a>
+                                </h3>
+                                <div class="product_cats">
+                                    <a href="#">Organic Dairy</a>,
+                                    <a href="#">Planting</a>
+                                </div>
+                                <span class="price">
+                                    <span class="amount">&euro;6.70</span>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product has-post-thumbnail">
+                        <div class="post_item_wrap">
+                            <div class="post_featured">
+                                <div class="post_thumb">
+                                    <img src="{% static 'site/img/15-570x703.jpg' %}" class="" alt="15" />
+                                    <div class="woo_thumb_buttons">
+                                        <div class="quick_view_images">
+                                            <a href="{% static 'site/img/15.jpg' %}" class="woocommerce-main-image zoom sc_button quick_view_button icon-resize-full-1"
+                                                title="">Quick View
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post_content">
+                                <h3>
+                                    <a href="#">Apetito Pure Fruit Juice</a>
+                                </h3>
+                                <div class="product_cats">
+                                    <a href="#">Organic Dairy</a>,
+                                    <a href="#">Planting</a>
+                                </div>
+                                <div class="star-rating" title="Rated 1 out of 5">
+                                    <span>
+                                        <strong class="rating">1</strong> out of 5
+                                    </span>
+                                </div>
+                                <span class="price">
+                                    <span class="amount">&euro;6.70</span>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</div>

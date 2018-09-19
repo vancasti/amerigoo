@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}About{% endblock %} 
+
+{% block navbar-left %} 
+    {% include "_navbar.html" with active_link="about" %} 
+{% endblock %}
+
+{% block container %}
+<body class="page body_filled article_style_stretch top_panel_above sidebar_hide">
+    <div class="page_content_wrap">
+        <div class="container">
+            <h2><a href="{% url 'profiles:show_self' %}">Mi cuenta</a><small> \ Cesta</small></h2>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Mi cesta</h3>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col"><b>Producto</b></th>
+                                <th scope="col"><b>Precio</b></th>
+                                <th scope="col" style="width:60px;"><b>Unidades</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for orderline in order %}
+                            <tr>
+                                <td>{{ orderline.product.name }}</td>
+                                <td>{{ orderline.product.unit_price | floatformat:2 }}&euro;</td>
+                                <td><input id="demo1" type="text" value="{{ orderline.amount }}" name="demo1">
+                                <script>
+                                    $("input[name='demo1']").TouchSpin();
+                                </script></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                     {% include "_resume.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock container %}
